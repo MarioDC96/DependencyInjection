@@ -1,5 +1,5 @@
-package service;
-import component.MyComponent;
+package co.develhope.DependencyInjection.service;
+import co.develhope.DependencyInjection.component.MyComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,11 @@
-package controller;
+package co.develhope.DependencyInjection.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import service.MyService;
+import org.springframework.web.bind.annotation.RestController;
+import co.develhope.DependencyInjection.service.MyService;
 
-@Controller
+@RestController
 public class MyController {
 
     @Autowired
@@ -20,7 +21,7 @@ public class MyController {
         return myService.getName();
     }
 
-    @GetMapping
+    @GetMapping("/")
     public void welcomeMessage(){
         System.out.println("Benvenuto");
     }

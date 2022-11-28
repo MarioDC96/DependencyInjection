@@ -1,19 +1,21 @@
-package component;
-
+package co.develhope.DependencyInjection.component;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @Component
 public class MyComponent {
 
+
     private String myComponentName;
 
-    public MyComponent(String myName){
+    public MyComponent(){
         System.out.println("MyComponent constructor");
-        this.myComponentName = myName;
+        this.myComponentName = "Mario";
     }
 
     public String getMyComponentName(){
-        String myComponentImmutableName = this.myComponentName;
+        final String myComponentImmutableName = this.myComponentName;
         return myComponentImmutableName;
     }
 }
